@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Home</title>
+    <!--web fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,900;1,100;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://kit.fontawesome.com/5c9fdf94db.js" crossorigin="anonymous"></script>
+    <!--custom css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css//font-awesome.css">
+    <link ref="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="#default" id="logo">Atharva Suryawanshi</a>
+        <div id="navbar-right">
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#domain">Domain</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+<div class="header">
+<h1>Hi, I'm <span>Atharva</span></h1>
+<p>My name is Atharva Ravindra Suryawanshi is my
+Portfolio here you can know about me & my skills<br>
+And this is my resume cv click here to download.
+</p>
+<button class="btn" type="button" id="GetFile">Download CV</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<script>
+$('#GetFile').on('click', function () {
+    $.ajax({
+        url: './sample.pdf',
+        method: 'GET',
+        xhrFields: {
+            responseType: 'blob'
+        },
+        success: function (data) {
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(data);
+            a.href = url;
+            a.download = 'myfile.pdf';
+            document.body.append(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        }
+    });
+});
+</script>
+
+</div>
+
+<div class="images">
+    <img src="assets/images/Abstract-colorful-liquid-shape-illustration-on-transparent-background-PNG-removebg-preview.png" class="shape">
+    <img src="assets/images/IMG-20210928-WA0017-removebg-preview.png" class="img-1">
+</div>
+
+<!--About Section-->
+<section id="about">
+    <div class="about">
+        <h1>About Myself</h1>
+        <hr style="width:120px;height:3px;border-width:0;color:rgb(141, 57, 57);background-color:rgb(80, 80, 80)">
+        <h2>Technologies I know</h2>
+    </div>
+    <div class="tech">
+        <div class="row">
+            <div class="column">
+              <img class="col-1" src="assets/images/html.png"  style="width:100%" >
+              <h1 class="h-1">HTML</h1>
+            </div>
+            <div class="column">
+              <img class="col-2" src="assets/images/css.png" style="width:100%">
+              <h1 class="h-2">CSS</h1>
+            </div>
+            <div class="column">
+              <img class="col-3" src="assets/images/js.png" style="width:100%">
+              <h1 class="h-3">JAVASCRIPT</h1>
+            </div>
+          </div>
+          </div>
+        </section>
+
+<!--domain-->
+<section id="domain">
+    <div class="domain">
+        <h1>Domain Independent Knowledge</h1>
+        <hr style="width:120px;height:3px;border-width:0;color:rgb(141, 57, 57);background-color:rgb(80, 80, 80)">
+        <p>Worked on mentioned domain requirements related to a particular type of software, purpose or industry vertical.It can be functional or nonfunctional. The common<br> factor for domain requirements is that they meet established standards or widely accepted feature sets for that category of software project</p>
+    <div class="container">
+  <div class="box">
+    <div class="icon"><i class="fa fa-circle-info"></i></div>
+    <div class="content">
+      <h3>Informative</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia commodi magni totam quas quam error dolore repellat odit, voluptas nisi laborum maiores. Odio, placeat?</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="icon"><i class="fa fa-cart-shopping"></i></div>
+    <div class="content">
+      <h3>E-Commerce</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia commodi magni totam quas quam error dolore repellat odit, voluptas nisi laborum maiores. Odio, placeat?</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="icon"><i class="fa fa-laptop"></i></div>
+    <div class="content">
+      <h3>Open Source</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia commodi magni totam quas quam error dolore repellat odit, voluptas nisi laborum maiores. Odio, placeat?</p>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h1>Let's Connect</h1>
+            <hr style="width:120px;height:3px;border-width:0;color:rgb(141, 57, 57);background-color:rgb(80, 80, 80)">
+            <p>
+                If I can be of any help, please do not hesitate to contact me.
+            </p>
+            <center>
+            <form id="login_form">
+            <input type="email" name="" placeholder="Enter your email" required />
+                <button id="btn">Subscribe</button>
+              </form>
+            </center>
+        </div>
+    </section>
+    <footer>
+     
+      <p>© 2022 Atharva Suryawanshi</p>
+  </footer>
+</body>
+    </html>
